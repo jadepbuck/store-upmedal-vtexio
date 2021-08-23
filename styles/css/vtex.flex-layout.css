@@ -1,0 +1,17 @@
+.flexRowContent{
+    background-color: #000;
+}
+.flexColChild{
+    background-color: #000;
+    margin-top: auto;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    height: auto;
+}
+.listItemActive :global(.vtex-button) { background-color: #000;
+    border-bottom: 2px solid #59FF00;
+    color: #59FF00; 
+    
+}
+

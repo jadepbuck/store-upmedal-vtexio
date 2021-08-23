@@ -1,0 +1,135 @@
+//layout para footer fixo com ícones
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": {
+    "children": [
+      "sticky-layout#footer-desktop"
+    ],
+    "props": {
+    "fullWidth": true
+    }
+  },
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#footer-mobile"
+    ]
+  },
+  "sticky-layout#footer-desktop": {
+    "props": {
+      "blockClass": "sticky-header",
+      "position": "bottom",
+      "verticalSpacing":5
+    },
+    "children": ["flex-layout.row#footer-desktop"]
+  },
+  "flex-layout.row#footer-desktop": {
+    "children": [
+      "flex-layout.col#entrar",
+      "flex-layout.col#desafios",
+      "flex-layout.col#loja",
+      "flex-layout.col#suporte"
+
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#footer-mobile": {
+    "children": [
+      "flex-layout.col#entrar",
+      "flex-layout.col#desafios",
+      "flex-layout.col#loja",
+      "flex-layout.col#suporte"
+]
+  },
+  "flex-layout.col#entrar": {
+    "props": {
+      "width": "grow",
+      "horizontalAlign": "middle"
+    },
+    "children": ["logo#entrar", "link#entrar"]
+  },
+  "logo#entrar": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/user.png",
+      "width": 30
+    }
+  },
+  "flex-layout.col#desafios": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#desafios", "link#desafio"]
+  },
+  "logo#desafios": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/trophy.png",
+      "width": 30
+    }
+  },
+  "flex-layout.col#loja": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#loja", "link#loja"]
+  },
+  "logo#loja": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/cart.png",
+      "width": 30
+    }
+  },
+  "flex-layout.col#suporte": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#suporte", "link#whatsapp"]
+  },
+  "logo#suporte": {
+    "props": {
+      "title": "Logo",
+      "href": "https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Etapa%20Aeron%C3%A1utica%20-%20Cole%C3%A7%C3%A3o%20For%C3%A7as%20Armadas%0A*ID%3A*%2052292",
+      "url": "assets/whatsapp.png",
+      "width": 30
+    }
+  },
+  "link#loja" : { 
+    "props" : { 
+      "href" : "/ {slug} / p" , 
+      "label" : "Loja" 
+    } 
+  },
+  "link#desafio" : { 
+    "props" : { 
+      "href" : "/ {slug} / p" , 
+      "label" : "Desafio" 
+    }
+  },
+  "link#whatsapp" : { 
+    "props" : { 
+      "href" : "https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Etapa%20Aeron%C3%A1utica%20-%20Cole%C3%A7%C3%A3o%20For%C3%A7as%20Armadas%0A*ID%3A*%2052292", 
+      "label" : "Suporte" 
+    }
+  },
+  "link#entrar" : { 
+    "props" : { 
+      "href" : "/ {slug} / p" , 
+      "label" : "Entrar" 
+    } 
+  }
+}

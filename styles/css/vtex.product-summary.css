@@ -1,0 +1,20 @@
+.container--card-product{
+    background-color: #424242;    
+}
+.container--card-product :global(.vtex-button) {
+    background-color:#59ff00;
+    color: #000;
+}
+
+.brandName{
+    color:#fff;
+}
+.installmentContainer{
+    color:#59ff00;
+}
+.sellingPriceContainer{
+    color:#59ff00;
+}
+.listPriceContainer{
+    color:#59ff00;
+}

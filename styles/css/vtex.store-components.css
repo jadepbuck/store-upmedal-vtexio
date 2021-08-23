@@ -1,0 +1,31 @@
+.imageElement{
+    border-radius: 20px;
+    padding-bottom: 2%;
+}
+.container{
+    background-color: #303030;
+}
+.logoImage{
+    margin-left: auto;
+    margin-right: auto;
+}
+.logoLink{
+    background-color: #000;
+}
+.searchBarContainer :global(.vtex-input-prefix__group) {
+    background-color: #000;
+    border: none;
+    border-radius: 0;
+    width: 500px;
+    border-bottom: 2px solid #fff;
+}
+.productBrand{
+    color: #fff;
+}
+.carouselGaleryThumbs{
+    display: none;
+}
+.carouselGaleryCursor{
+     margin: 0 auto;
+} 
+

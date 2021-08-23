@@ -1,0 +1,229 @@
+//tab-layout para criação de menu por categorias 
+//slider-layout para criação de carrosel de produtos em destaque
+{
+  "store.home": {
+    "blocks": [
+      "tab-layout"      
+    ]
+  },
+  "tab-layout": {
+    "children": [
+      "tab-list",
+      "slider-layout#home",
+      "tab-content"
+    ]
+  },
+  "tab-list": {
+    "children": [
+      "tab-list.item#promocao",
+      "tab-list.item#corinthians",
+      "tab-list.item#palmeiras",
+      "tab-list.item#signos"
+    ]
+  },
+  "tab-content": {
+    "children": [
+      "tab-content.item#promocao",
+      "tab-content.item#corinthians",
+      "tab-content.item#palmeiras",
+      "tab-content.item#signos"
+    ]
+  },
+
+  // tab-content com conteúdo de busca
+
+  "tab-content.item#promocao": {
+    "children": [
+      "search-result-layout.customQuery#promocao"
+    ],
+    "props": {
+      "tabId": "promocao"
+    }
+  },
+  "tab-content.item#corinthians": {
+    "children": [
+      "search-result-layout.customQuery#corinthians"
+    ],
+    "props": {
+      "tabId": "corinthians"
+    }
+  },
+  "tab-content.item#palmeiras": {
+    "children": [
+      "search-result-layout.customQuery#palmeiras"
+    ],
+    "props": {
+      "tabId": "palmeiras"
+    }
+  },
+  "tab-content.item#signos": {
+    "children": [
+      "search-result-layout.customQuery#signos"
+    ],
+    "props": {
+      "tabId": "signos"
+    }
+  },
+
+  //tab-list do menu
+  "tab-list.item#promocao": {
+    "props": {
+      "tabId": "promocao",
+      "label": "promoção",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#corinthians": {
+    "props": {
+      "tabId": "corinthians",
+      "label": "corinthians"
+    }
+  },
+  "tab-list.item#palmeiras": {
+    "props": {
+      "tabId": "palmeiras",
+      "label": "palmeiras"
+    }
+  },
+  "tab-list.item#signos": {
+    "props": {
+      "tabId": "signos",
+      "label": "signos"
+    }
+  },
+
+  //conteúdo do menu: busca com filtro por categoria
+
+  "search-result-layout.customQuery#promocao": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByBestDiscountDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "153",
+        "mapField": "productClusterIds",
+        "skusFilter": "ALL_AVAILABLE"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile"
+    ]
+  },
+  "search-result-layout.desktop":{
+    "children": [
+      "search-content"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-content": {
+    "blocks": [
+      "gallery", "not-found"
+    ]
+  },
+  "gallery":{
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 2,
+            "desktop": 2,
+            "tablet": 2,
+            "phone": 1
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf",
+      "GridSummary": "product-summary.shelf"
+    }
+  },
+  "product-summary.shelf": {
+    "children": [
+      "product-summary-name",
+      "product-images",
+      "product-summary-price",
+      "add-to-cart-button"
+    ],
+    "props":{
+      "blockClass": ["card-product", "teste"]
+    }
+  },
+  "product-images":{
+    "props": {
+      "showNavigationArrows":true,
+      "showPaginationDots": true
+    }
+  },
+  "add-to-cart-button": {
+    "props": {
+      "onClickBehavior": "go-to-product-page",
+      "text": "ver detalhes"
+    }
+  },
+  "search-result-layout.mobile":{
+    "children": [
+      "search-content"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  
+  "search-result-layout.customQuery#corinthians":{
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByBestDiscountDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "154",
+        "mapField": "productClusterIds",
+        "skusFilter": "ALL_AVAILABLE"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile"
+    ]
+  },
+  "search-result-layout.customQuery#palmeiras": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByBestDiscountDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "155",
+        "mapField": "productClusterIds",
+        "skusFilter": "ALL_AVAILABLE"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile"
+    ]
+  },
+  "search-result-layout.customQuery#signos": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByBestDiscountDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "156",
+        "mapField": "productClusterIds",
+        "skusFilter": "ALL_AVAILABLE"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+.caretIcon{
+    width: 15px;
+    height: 30px;
+    margin-top: 72%;
+    margin-left: 220px;
+    margin-right: 220px;
+    border-radius: 5px;
+    color: rgba(255, 255, 2555, 0.3);
+}
+.caretIcon:hover { 
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #a8a8a878;
+}
+.paginationDot--isActive{
+    background-color: #59ff00;
+}
+.sliderLayoutContainer{
+    background-color: #303030;
+    padding: 5%;;
+}
